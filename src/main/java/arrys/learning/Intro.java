@@ -33,18 +33,27 @@ public class Intro {
             String[] myAnimals = animals;
             String[] otherAnimals = {"Parrot", "Dog", "Cat"};
 
+            //check the reference equality
             System.out.println(animals.equals(myAnimals)); // true
-            System.out.println(animals == myAnimals); // true
+            System.out.println(animals == myAnimals); // true (2 references pointing the same object)
+
+            // elements are the same elements
             System.out.println(Arrays.equals(animals, myAnimals)); // true
 
+            //check reference equality
             System.out.println(animals.equals(otherAnimals)); // false
             System.out.println(animals == otherAnimals); // false
-            System.out.println(Arrays.equals(animals, otherAnimals)); // true
 
+
+            //chech if each element in the array are equal to the other elements
+                        System.out.println(Arrays.equals(animals, otherAnimals)); // true
+
+             // print the array hash code [Ljava.lang.string;@code
             System.out.println(animals);
             System.out.println(animals.toString());
 
-            System.out.println(Arrays.toString(animals));
+            //print the element of the array
+            System.out.println(Arrays.toString(animals)); // [Parrot, Dog, Cat]
 
         }
 }
